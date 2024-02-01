@@ -9,15 +9,8 @@
  * @right: Pointer to the right child node
  */
 
-struct binary_tree_node
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    int n;
-    struct binary_tree_node *parent;
-    struct binary_tree_node *left;
-    struct binary_tree_node *right;
-};
-
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value) {
 	binary_tree_t *new_node = malloc(sizeof(binary_tree_t));
 
 	new_node->n = value;
@@ -25,9 +18,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value) {
 	new_node->left = NULL;
 	new_node->right = NULL;
 
-	return new_node;
+	return (new_node);
 
-	if (new_node == NULL) {
-		return NULL;
+	if (new_node == NULL)
+	{
+		return (NULL);
 	}
 }
